@@ -14,3 +14,11 @@ const todos = [{
     text: 'Buy oats',
     completed: true
   }];
+
+  const incompleteTodos = todos.filter(function (todo) {
+      return !todo.completed;
+  })
+
+const summary = document.createElement('h2');
+summary.textContent = `You have ${incompleteTodos.length} left`;
+document.querySelector('body').appendChild(summary);
