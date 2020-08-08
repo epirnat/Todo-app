@@ -28,3 +28,7 @@ todos.forEach(function (todo) {
     p.textContent = todo.text;
     document.querySelector('body').appendChild(p);
 })
+
+document.querySelector('#add-todo').addEventListener('click', function (e) {
+  console.log('Adding new todo..');
+})
