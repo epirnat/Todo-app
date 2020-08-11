@@ -47,3 +47,12 @@ document.querySelector('#search-text').addEventListener('input', function (e) {
   renderTodos(todos, filters)
 })
 
+document.querySelector('#new-todo').addEventListener('submit', function (e) {
+  e.preventDefault();
+  todos.push({
+    text: e.target.elements.text.value,
+    completed: false
+  })
+  renderTodos(todos, filters);
+  e.target.elements.text.value = '';
+})
